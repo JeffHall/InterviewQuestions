@@ -1,4 +1,6 @@
-public class ReverseOrderOfCharactersInAString {
+package interviewquestions;
+
+public final class ReverseOrderOfCharactersInAString {
 
     /*
     Create an algorithm to reverse the order of words in a string.
@@ -7,13 +9,7 @@ public class ReverseOrderOfCharactersInAString {
     "Friday is today that happy am I"
      */
 
-    public static void main(String args[]) {
-        String switchThisStringAround = switchItAround("I am happy that today is Friday");
-        System.out.println(switchThisStringAround);
-
-    }
-
-    private static String switchItAround(String input) {
+    protected static String switchItAround(String input) {
 
         int arrayLength = input.length();
         char[] outputArray;
