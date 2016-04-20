@@ -2,25 +2,36 @@ package timbuchalka;
 
 public class Main {
 
-    public static void main (String[] args) {
-        boolean gameOver = true;
-        int score = 800;
-        int levelCompleted = 5;
-        int bonus = 100;
+    public static void main(String[] args) {
+//        calcFeetAndInchesToCentimeters(6, 0);
+//        calcFeetAndInchesToCentimeters(7, 5);
+//        calcFeetAndInchesToCentimeters(-10, 1);
+//        calcFeetAndInchesToCentimeters(0, 1);
+//        calcFeetAndInchesToCentimeters(6, 13);
+        calcFeetAndInchesToCentimeters(157);
+        calcFeetAndInchesToCentimeters(-10);
+    }
 
-        if(gameOver) {
-            int finalScore = (score + (levelCompleted * bonus));
-            System.out.println("Your final score was " + finalScore);
+    private static double calcFeetAndInchesToCentimeters(double feet, double inches) {
+        if (feet >= 0 && (inches >= 0 && inches <= 12)) {
+            double totalInches = ((12d * feet) + inches);
+            double centimeters = (2.54d * totalInches);
+            System.out.println(feet + " feet, " + inches + " inches = " + centimeters + " cm");
+            return centimeters;
+        } else {
+            System.out.println("Invalid feet or inches parameters");
+            return -1;
+        }
+    }
+
+    private static double calcFeetAndInchesToCentimeters(double inches) {
+        if (inches < 0) {
+            return -1;
         }
 
-        score = 10000;
-        levelCompleted = 8;
-        bonus = 200;
-
-        if(gameOver) {
-            int finalScore = (score + (levelCompleted * bonus));
-            System.out.println("Your second final score was " + finalScore);
-        }
+        double feet = (int) (inches / 12);
+        double remainingInches = (int) (inches % 12d);
+        return calcFeetAndInchesToCentimeters(feet, remainingInches);
     }
 
 }
