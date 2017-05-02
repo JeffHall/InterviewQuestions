@@ -10,6 +10,10 @@ public class Employee extends Human implements Workable {
         System.out.println("speaking...");
     }
 
+    public void walk() {
+        System.out.println("Employee is walking...");
+    }
+
     public void work() {
         System.out.println("working...");
     }

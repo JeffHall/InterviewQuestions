@@ -1,6 +1,6 @@
 package masterobjectorienteddesigninjava.humans;
 
-public class Earth {
+public class Main {
 
     public static void main(String[] args) {
 
@@ -10,6 +10,8 @@ public class Earth {
         human1.eat();
         human1.speak();
         human1.walk();
+
+        System.out.println("");
 
         employee1.eat();
         employee1.speak();
