@@ -1,6 +1,6 @@
 package masterobjectorienteddesigninjava.humans;
 
-public class Human {
+public class Human implements Eatable, Speakable, Walkable {
 
     String name;
     int age;
@@ -29,7 +29,4 @@ public class Human {
         System.out.println("walking...");
     }
 
-    public void working() {
-        System.out.println("working...");
-    }
 }
