@@ -2,12 +2,12 @@ package masterobjectorienteddesigninjava.humans;
 
 public class Human implements Eatable, Speakable, Walkable {
 
-    String name;
-    int age;
-    int heightInInches;
-    String eyeColor;
+    private String name;
+    private int age;
+    private int heightInInches;
+    private String eyeColor;
 
-    public Human(String name, int age, int heightInInches, String eyeColor) {
+    Human(String name, int age, int heightInInches, String eyeColor) {
         this.name = name;
         this.age = age;
         this.heightInInches = heightInInches;
